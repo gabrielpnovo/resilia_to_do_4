@@ -1,4 +1,5 @@
-# Bem-vindo ao projeto de Criação de Histórias de Usuários
+** BEM-VINDO AO PROJETO DE CRIAÇÃO DE HISTÓRIAS DE USUÁRIO **
 
-## Vamos às instruções para download do projeto:
-**teste**
+1. Vamos às instruções para download do projeto
+    i. Faça o download dos arquivos "main.js" e "package.json" e salve no local desejado em seu computador;
+    ii. Abra a pasta em sua IDE de preferência (indicamos o VsCode); 
