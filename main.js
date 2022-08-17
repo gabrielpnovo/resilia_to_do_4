@@ -44,23 +44,28 @@ function getObjetivo(nroHistoria) {
 
 async function main () {
     await qtdHistorias().then(async answer =>{
-        for(let i=0;i<answer;i++) {
-            await getUsuario(i+1).then(answer =>{
-                // historia.push(answer)
-                historia[0] = answer
-            })
-        
-            await getDesejo(i+1).then(answer =>{
-                // historia.push(answer)
-                historia[1] = answer
-            })
-        
-            await getObjetivo(i+1).then(answer =>{
-                // historia.push(answer)
-                historia[2] = answer
-            })
-            console.log('')
-            listaHistorias.push(historia.slice(0,3))
+        if (isNaN(answer) == false) {
+            for(let i=0;i<answer;i++) {
+                await getUsuario(i+1).then(answer =>{
+                    // historia.push(answer)
+                    historia[0] = answer
+                })
+            
+                await getDesejo(i+1).then(answer =>{
+                    // historia.push(answer)
+                    historia[1] = answer
+                })
+            
+                await getObjetivo(i+1).then(answer =>{
+                    // historia.push(answer)
+                    historia[2] = answer
+                })
+                console.log('')
+                listaHistorias.push(historia.slice(0,3))
+            }
+        } else {
+            console.log('Vc deve inserir um número!')
+            rl.close()
         }
     })
 
